@@ -108,6 +108,7 @@ class SiteController extends Controller
             $insta_posts = '';
             $insta_followers = '';
             $insta_following = '';
+            $insta_fullname = '';
             $insta_biography = '';
             $insta_photo = '';
         }

@@ -38,16 +38,6 @@ $this->title = 'Пошук по тегу';
 										</a>
 									</div>
 								</div>
-
-								<!--
-								<div class="btn-group btn-group-sm">
-									<a download href="<?=$insta_result['graphql']['user']['edge_owner_to_timeline_media']['edges']["$i"]['node']['thumbnail_resources']['0']['src']?>" class="btn btn-primary">150w</a>
-									<a download href="<?=$insta_result['graphql']['user']['edge_owner_to_timeline_media']['edges']["$i"]['node']['thumbnail_resources']['1']['src']?>" class="btn btn-primary">240w</a>
-									<a download href="<?=$insta_result['graphql']['user']['edge_owner_to_timeline_media']['edges']["$i"]['node']['thumbnail_resources']['2']['src']?>" class="btn btn-primary">320w</a>
-									<a download href="<?=$insta_result['graphql']['user']['edge_owner_to_timeline_media']['edges']["$i"]['node']['thumbnail_resources']['3']['src']?>" class="btn btn-primary">480w</a>
-									<a download href="<?=$insta_result['graphql']['user']['edge_owner_to_timeline_media']['edges']["$i"]['node']['thumbnail_resources']['4']['src']?>" class="btn btn-primary">640w</a>
-								</div>
-							-->
 						</div>
 						<img class="insta-img" decoding="auto" style sizes="293px" srcset="<?=$insta_result['entry_data']['TagPage'][0]['graphql']['hashtag']['edge_hashtag_to_media']['edges'][$i]['node']['thumbnail_resources']['0']['src']?> 150w, <?=$insta_result['entry_data']['TagPage'][0]['graphql']['hashtag']['edge_hashtag_to_media']['edges'][$i]['node']['thumbnail_resources']['1']['src']?> 240w,<?=$insta_result['entry_data']['TagPage'][0]['graphql']['hashtag']['edge_hashtag_to_media']['edges'][$i]['node']['thumbnail_resources']['2']['src']?> 320w, <?=$insta_result['entry_data']['TagPage'][0]['graphql']['hashtag']['edge_hashtag_to_media']['edges'][$i]['node']['thumbnail_resources']['3']['src']?> 480w, <?=$insta_result['entry_data']['TagPage'][0]['graphql']['hashtag']['edge_hashtag_to_media']['edges'][$i]['node']['thumbnail_resources']['4']['src']?> 640w" src="<?=$insta_result['entry_data']['TagPage'][0]['graphql']['hashtag']['edge_hashtag_to_media']['edges'][$i]['node']['thumbnail_resources']['4']['src']?>"/>
 					</div>

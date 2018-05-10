@@ -82,7 +82,7 @@ class InstaForm extends Model
 		$last = count($insta_json['entry_data']['ProfilePage'][0]['graphql']['user']['edge_owner_to_timeline_media']['edges']);
 		for ($i=0;$i<$last;$i++) {
 			$result[$i] = $insta_json['entry_data']['ProfilePage'][0]['graphql']['user']['edge_owner_to_timeline_media']['edges']["$i"]['node']['display_url'];
-			$name = __DIR__.'\\..\\web\\img\\byusername\\original'.$i.'.jpg';
+			$name = __DIR__.'/../web/img/byusername/original'.$i.'.jpg';
 			file_put_contents($name, file_get_contents($result[$i]));
 		}
 		

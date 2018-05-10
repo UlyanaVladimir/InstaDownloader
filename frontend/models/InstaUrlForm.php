@@ -40,7 +40,7 @@ class InstaUrlForm extends Model
   	$result = [];
     if(isset($insta_json['entry_data']['PostPage']))
     {
-      $caption = (isset($insta_json['entry_data']['PostPage'][0]['graphql']['shortcode_media']['edge_media_to_caption']['edges'][0]['node']['text'])) ? $jsonobj['entry_data']['PostPage'][0]['graphql']['shortcode_media']['edge_media_to_caption']['edges'][0]['node']['text'] : null;
+      $caption = (isset($insta_json['entry_data']['PostPage'][0]['graphql']['shortcode_media']['edge_media_to_caption']['edges'][0]['node']['text'])) ? $insta_json['entry_data']['PostPage'][0]['graphql']['shortcode_media']['edge_media_to_caption']['edges'][0]['node']['text'] : null;
       $username = $insta_json['entry_data']['PostPage'][0]['graphql']['shortcode_media']['owner']['username'];
       $full_name = $insta_json['entry_data']['PostPage'][0]['graphql']['shortcode_media']['owner']['full_name'];
       $userid = $insta_json['entry_data']['PostPage'][0]['graphql']['shortcode_media']['owner']['id'];
@@ -58,7 +58,7 @@ class InstaUrlForm extends Model
         foreach($insta_json['entry_data']['PostPage'][0]['graphql']['shortcode_media']['edge_sidecar_to_children']['edges'] as $images) 
         {
           $img[] = $images['node']['display_url'];
-          $name = __DIR__.'\\..\\web\\img\\byurl\\original'.$index.'.jpg';
+          $name = __DIR__.'/../web/img/byurl/original'.$index.'.jpg';
           file_put_contents($name, file_get_contents($img[$index]));
 
           if($images['node']['is_video'] == true)
@@ -69,7 +69,7 @@ class InstaUrlForm extends Model
       else
       {
         $img[] = $insta_json['entry_data']['PostPage'][0]['graphql']['shortcode_media']['display_url'];
-        $name = __DIR__.'\\..\\web\\img\\byurl\\original0.jpg';
+        $name = __DIR__.'/../web/img/byurl/original0.jpg';
         file_put_contents($name, file_get_contents($img[0]));
         if($insta_json['entry_data']['PostPage'][0]['graphql']['shortcode_media']['is_video'] == true)
         {

@@ -23,7 +23,11 @@ $this->title = 'Пошук по url';
 			<div class="insta-gallery-tag">
 				<?php if ($insta_url) {?>
 				<div class="row">
-					<?php for ($i=0;$i<count($insta_photo['image_url']);$i++) {
+					<?php 
+					$carouselimgs = "";
+					$carouselindphoto = "";
+
+					for ($i=0;$i<count($insta_photo['image_url']);$i++) {
 						$activetag = "";
 						if($i == 0)
 							$activetag = "active";
@@ -49,6 +53,8 @@ $this->title = 'Пошук по url';
 					}
 
 					$video = false;
+					$carouselvids = "";
+					$carouselindvid = "";
 					for ($i=0;$i<count($insta_photo['video_url']);$i++) {
 						if(!empty($insta_photo['video_url']))
 						{

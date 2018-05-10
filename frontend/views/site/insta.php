@@ -64,16 +64,6 @@ $this->title = 'Пошук по імені';
 										</a>
 									</div>
 								</div>
-
-								<!--
-								<div class="btn-group btn-group-sm">
-									<a download href="<?=$insta_result['graphql']['user']['edge_owner_to_timeline_media']['edges']["$i"]['node']['thumbnail_resources']['0']['src']?>" class="btn btn-primary">150w</a>
-									<a download href="<?=$insta_result['graphql']['user']['edge_owner_to_timeline_media']['edges']["$i"]['node']['thumbnail_resources']['1']['src']?>" class="btn btn-primary">240w</a>
-									<a download href="<?=$insta_result['graphql']['user']['edge_owner_to_timeline_media']['edges']["$i"]['node']['thumbnail_resources']['2']['src']?>" class="btn btn-primary">320w</a>
-									<a download href="<?=$insta_result['graphql']['user']['edge_owner_to_timeline_media']['edges']["$i"]['node']['thumbnail_resources']['3']['src']?>" class="btn btn-primary">480w</a>
-									<a download href="<?=$insta_result['graphql']['user']['edge_owner_to_timeline_media']['edges']["$i"]['node']['thumbnail_resources']['4']['src']?>" class="btn btn-primary">640w</a>
-								</div>
-							-->
 						</div>
 						<img class="insta-img" decoding="auto" style sizes="293px" srcset="<?=$insta_result['entry_data']['ProfilePage'][0]['graphql']['user']['edge_owner_to_timeline_media']['edges']["$i"]['node']['thumbnail_resources']['0']['src']?> 150w, <?=$insta_result['entry_data']['ProfilePage'][0]['graphql']['user']['edge_owner_to_timeline_media']['edges']["$i"]['node']['thumbnail_resources']['1']['src']?> 240w,<?=$insta_result['entry_data']['ProfilePage'][0]['graphql']['user']['edge_owner_to_timeline_media']['edges']["$i"]['node']['thumbnail_resources']['2']['src']?> 320w, <?=$insta_result['entry_data']['ProfilePage'][0]['graphql']['user']['edge_owner_to_timeline_media']['edges']["$i"]['node']['thumbnail_resources']['3']['src']?> 480w, <?=$insta_result['entry_data']['ProfilePage'][0]['graphql']['user']['edge_owner_to_timeline_media']['edges']["$i"]['node']['thumbnail_resources']['4']['src']?> 640w" src="<?=$insta_result['entry_data']['ProfilePage'][0]['graphql']['user']['edge_owner_to_timeline_media']['edges']["$i"]['node']['thumbnail_resources']['4']['src']?>"/>
 					</div>
@@ -85,11 +75,12 @@ $this->title = 'Пошук по імені';
 		<br>
 
 		<?php if ($insta_name) {?>
+		<!--
 		<pre>
-			<?php print_r($insta_result); ?>
+			<?php //print_r($insta_result); ?>
 		</pre>
 
-		<!--
+		
 		<pre>
 			<?php
 			//$insta_json2 = file_get_contents('https://www.instagram.com/graphql/query/?query_hash=472f257a40c653c64c666ce877d59d2b&variables={"id":"1706775204","first":12,"after":"AQCPm3XgSDSXXMdZ93fC3hVKzuODLzq43CbsAjMupJpBsEc8kl1enwHU_Lkz40DBTR7I2qSZoVZxxETsPW72fY2T4NLZ-d90ng9qbd69dEnuvA"}');
