@@ -28,7 +28,6 @@
 
         "codeception/base": "^2.2.3",
         "codeception/verify": "~0.3.1",
-        "purrweb/yii2-heroku": "*"
     },
     "config": {
         "process-timeout": 1800,
