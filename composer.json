@@ -25,8 +25,12 @@
         "yiisoft/yii2-faker": "~2.0.0",
 
         "codeception/base": "^2.2.3",
-        "codeception/verify": "~0.3.1"
+        "codeception/verify": "~0.3.1",
+        "ext-gd": "*"
     },
+    "scripts": {
+        "post-install-cmd": "sh post-install-cmd.sh"
+    }
     "config": {
         "process-timeout": 1800,
         "fxp-asset":{
