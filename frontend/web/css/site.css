@@ -1,6 +1,8 @@
 html,
 body {
     height: 100%;
+    font-family: 'Segoe UI';
+    font-weight: 200;
 }
 
 .wrap {
@@ -11,7 +13,7 @@ body {
 }
 
 .wrap > .container {
-    padding: 70px 15px 20px;
+    padding: 77px 15px 20px;
 }
 
 .footer {
@@ -117,4 +119,262 @@ a.desc:after {
 
 .nav > li > form > button.logout:focus {
     outline: none;
+}
+
+/*====*/
+.insta-nav-color {
+    background-color: #fafafa;
+}
+
+.insta-main {
+    padding: 60px 20px 0;
+}
+
+.insta-user {
+    margin-bottom: 44px;
+    margin-top: 40px;
+}
+
+.insta-gallery-tag {
+    margin-top: 40px;
+}
+
+.insta-user-avatar {
+    display: inline-block;
+    background-color: #fafafa;
+    border-radius: 50%;
+    width: 152px;
+    height: 152px;
+    overflow: hidden;
+}
+
+.insta-user-info {
+    margin-left: 30px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.info-normal {
+    color: #262626;
+    font-size: 16px;
+    margin-right: 40px;
+    font-weight: 400;
+}
+
+.info-bold {
+    font-weight: 700;
+}
+
+.info-username {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 200;
+    margin-top: 0;
+}
+
+.insta-photo {
+    position: relative;
+    margin-bottom: 28px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0.5px 11px 32px rgba(0,0,0,.2);
+    -moz-box-shadow: .5px 11px 32px rgba(0,0,0,.2);
+    box-shadow: 0.5px 11px 32px rgba(0,0,0,.2);
+    overflow: hidden;
+}
+
+.insta-img{
+    height: 100%;
+    width: 100%;
+}
+
+.insta-img-url{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+.insta-downloads{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    padding-top: 50%;
+    text-align: center;
+    opacity: 0;
+    transition: all .25s;
+}
+
+.insta-photo:hover .insta-downloads{
+    opacity: 1;
+}
+
+/*===*/
+.insta-btn {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.dws {
+ position: absolute;
+ top: 0;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+.pulse, .bloc, .download {
+ position: absolute;
+ width: 90px;
+ height: 90px;
+ color: #fff;
+ text-align: center;
+ border-radius: 50%;
+}
+.bloc {
+ cursor: pointer;
+ z-index: 1;
+ overflow: hidden;
+}
+.pulse {
+ background: #5CC2E2;
+ position: relative;
+ transition: .5s;
+}
+.download {
+ font-size: 50px;
+ line-height: 90px;
+}
+.text {
+ position: absolute;
+ opacity: 0;
+ text-transform: uppercase;
+ font-weight: 700;
+ top: 40%;
+ left: 10px;
+ font-size: 15px;
+ transform: scaleX(-1);
+ transition: .5s ease-in-out;
+}
+.download i {
+ transition: .5s ease-in-out;
+}
+.pulse:hover {
+ background: #29AEE3;
+}
+.pulse:hover i {
+ transition: .5s ease-in-out;
+ transform: scale(0);
+}
+.pulse:hover .text {
+ transform: scaleX(1);
+ transition: .5s ease-in-out;
+ opacity: 1;
+}
+.pulse:hover::before,
+.pulse:hover::after {
+ content: '';
+ position: absolute;
+ border: 1px solid #29AEE3;
+ left: -20px;
+ right: -20px;
+ top: -20px;
+ bottom: -20px;
+ border-radius: 50%;
+ animation: pulse 1.8s linear infinite;
+ opacity: 0;
+}
+.pulse:hover::after {
+ animation-delay: .5s;
+}
+@keyframes pulse {
+ 0% {
+  transform: scale(0.5);
+  opacity: 0;
+ }
+ 50% {
+  opacity: 1;
+ }
+ 100% {
+  transform: scale(1.2);
+  opacity: 0;
+ }
+}
+/*===*/
+
+.insta-text-field {
+    border-radius: 30px;
+    text-align: center;
+}
+
+/*@media(min-width:767px) {*/
+    .insta-nav {
+        background-color: #fff;
+        border-bottom: 1px solid rgba(0,0,0,.0975);
+        height: 77px;
+        padding: 26px 40px;
+        transition: height .2s ease-in-out;
+    }
+
+    .insta-nav-items {
+        position: absolute;
+        right: 55px;
+        top: 0;
+        height: 77px;
+    }
+
+    .navbar-nav > li > a {
+        color: #262626;
+        padding-top: 28px;
+        padding-bottom: 28px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+        position: absolute;
+        top: 19px;
+        padding: 0;
+
+        background-image: url("../img/sprite_core.png");
+        background-repeat: no-repeat;
+
+        background-position: -177px -264px;
+        height: 35px;
+        width: 176px;
+    }
+/*}*/
+
+.insta-by{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+.insta-by-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding-top: 45%;
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+    background-color: rgba(0,0,0,.25);
+    transition: all .25s;
+}
+
+.insta-by:hover .insta-by-text{
+    background-color: rgba(0,0,0,.5);
+}
+
+.jumbotron{
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

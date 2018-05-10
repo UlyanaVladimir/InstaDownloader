@@ -26,20 +26,24 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap">
+<div class="wrap insta-nav-color">
     <?php
     NavBar::begin([
-        'brandLabel' => Yii::$app->name,
+        'brandLabel' => '',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-nav navbar-fixed-top insta-nav',
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
+        ['label' => 'Головна', 'url' => ['/site/index']],
+        ['label' => 'Інструкція', 'url' => ['/site/about']],
+        //['label' => 'Contact', 'url' => ['/site/contact']],
+        //['label' => 'Пошук по URL', 'url' => ['/site/instaurl']],
+        //['label' => 'Пошук по імені', 'url' => ['/site/insta']],
+        //['label' => 'Пошук по тегам', 'url' => ['/site/instatag']],
     ];
+    /*/
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
@@ -53,13 +57,14 @@ AppAsset::register($this);
             . Html::endForm()
             . '</li>';
     }
+    /*/
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
+        'options' => ['class' => 'navbar-nav navbar-right insta-nav-items'],
+        //'options' => ['class' => 'insta-nav'],
         'items' => $menuItems,
     ]);
     NavBar::end();
     ?>
-
     <div class="container">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
@@ -71,9 +76,9 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
+        <p class="pull-left">&copy; Ульяна Владимир <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-right">СТ-1</p>
     </div>
 </footer>
 

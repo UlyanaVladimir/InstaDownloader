@@ -1,9 +1,9 @@
 <?php
 $params = array_merge(
-    require __DIR__ . '/../../common/config/params.php',
-    require __DIR__ . '/../../common/config/params-local.php',
-    require __DIR__ . '/params.php',
-    require __DIR__ . '/params-local.php'
+    require(__DIR__ . '/../../common/config/params.php'),
+    require(__DIR__ . '/../../common/config/params-local.php'),
+    require(__DIR__ . '/params.php'),
+    require(__DIR__ . '/params-local.php')
 );
 
 return [
@@ -36,14 +36,24 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            //'suffix' => '.html',
             'rules' => [
+                '' => 'site/index',
+                
+                
+                '<action>'=>'site/<action>',
             ],
+        ], 
+         'assetManager' => [
+             'basePath' => '@webroot/assets',
+             'baseUrl' => '@web/assets'
+        ],  
+        'request' => [
+            'baseUrl' => ''
         ],
-        */
     ],
     'params' => $params,
 ];
