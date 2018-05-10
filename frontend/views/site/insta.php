@@ -86,7 +86,7 @@ $this->title = 'Пошук по імені';
 
 		<?php if ($insta_name) {?>
 		<pre>
-			<?php //print_r($insta_result); ?>
+			<?php print_r($insta_result); ?>
 		</pre>
 
 		<!--
